@@ -60,6 +60,7 @@ nav ul li {
     width: 100%;
     border: solid 2px var(--col2);
     padding: 0.5em;
+    text-align: left;
 }
 
 nav ul li a{
@@ -67,6 +68,7 @@ nav ul li a{
     font-family: var(--bodyfont);
     color: var(--col2);
     width: 100%;
+    text-align: left;
 }
 
 nav ul li a:hover {

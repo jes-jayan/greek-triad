@@ -50,7 +50,6 @@ nav ul {
     display: flex;
     flex-direction: column;
     list-style: none;
-    text-align: left;
     justify-content: space-around;
     padding: 0;
     border: solid 2px var(--col2);
@@ -68,7 +67,6 @@ nav ul li a{
     font-family: var(--bodyfont);
     color: var(--col2);
     width: 100%;
-    text-align: left;
 }
 
 nav ul li a:hover {

@@ -156,7 +156,7 @@ footer p {
     nav ul{
         flex-direction: row;
         padding: 0;
-        
+        text-align: center; 
     }
 
     nav ul li {

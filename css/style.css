@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+:root {
+    --col1: #ddd0c1;
+    --col2: #361708;
+    --col3: #c23e3e;
+
+    --logofont: "Caesar Dressing", system-ui;
+    --bodyfont: "Source Serif 4", serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--col1);
+    font-family: var(--bodyfont);
+    color: var(--col2);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--logofont);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    max-width: 56.25rem; /*900px*/
+    margin: auto;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--col2);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: center;
+    justify-content: space-around;
+    padding: 0;
+    border: solid 2px var(--col2);
+}
+
+nav ul li {
+    width: 100%;
+    border: solid 2px var(--col2);
+    padding: 0.5em;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-family: var(--bodyfont);
+    color: var(--col2);
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: var(--col3);
+    font-weight: bolder;
+}
+
+footer {
+    background-color: var(--col1);
+    border-top: solid 2px var(--col2);
+    text-align: center;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    color: var(--col3);
+}
+
+footer p {
+    color: var(--col2);
+    font-size: 1rem;
+}
+
+.masthead{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.masthead img {
+    width: 2rem;
+    height: auto;
+}
+
+.masthead h1 {
+    font-family: var(--logofont);
+}
+
+.controls {
+    margin-top: 2em;
+}
+
+.controls ul {
+    list-style: none;
+    padding: 0;
+}
+
+.controls ul li {
+    float: left;
+    cursor: pointer;
+    color: white;
+    padding-right: 1em;
+}
+
+.controls ul li button {
+    cursor: pointer;
+    font-family: var(--logofont);
+    font-size: 1em;
+    background-color: transparent;
+    padding: 0.6em;
+    padding-bottom: 0.1em;
+    border: none;
+}
+
+#active {
+    color: var(--col3);
+    font-weight: bold;
+    border-bottom: solid var(--col3) 5px;
+}
+
+.content {
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+.social-icons {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+
+@media only screen and (min-width: 43.75em){
+    nav ul{
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .content {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto auto auto;
+
+        grid-template-areas:
+        "a a a b b b"
+        "a a a c c c"
+        "a a a c c c"
+    ;
+
+    }
+
+    .content h1 {
+        grid-area: b;
+    }
+
+    .content img {
+        grid-area: a;
+    }
+
+    .content p {
+        grid-area: c;
+    }
+
+}
